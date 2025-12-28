@@ -28,6 +28,11 @@ fn conf() -> miniquad::conf::Conf {
         window_width: 1600,
         window_height: 900,
         high_dpi: true,
+        icon: Some(miniquad::conf::Icon {
+            small: include_bytes!("../res/icon_16").to_owned(),
+            medium: include_bytes!("../res/icon_32").to_owned(),
+            big: include_bytes!("../res/icon_64").to_owned(),
+        }),
         ..Default::default()
     }
 }
